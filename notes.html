@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notes - Prof. Ashvini S. Dikale</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding-top: 15vh; /* To prevent overlap with nav */
+      background-color: #fff0f5;
+    }
+
+    /* Navigation Bar */
+    .navlist {
+      display: flex;
+      gap: 3.5rem;
+      background: pink;
+      height: 15vh;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      z-index: 999;
+    }
+
+    .navlist li {
+      list-style: none;
+    }
+
+    .navlist li a {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 1rem;
+      color: black;
+      position: relative;
+    }
+
+    .navlist li a::after,
+    .navlist .active::after {
+      content: "";
+      position: absolute;
+      background: black;
+      width: 100%;
+      height: 0.1rem;
+      left: 0;
+      bottom: -5px;
+      transform: scaleX(0);
+      transition: transform 0.5s;
+    }
+
+    .navlist li a:hover::after,
+    .navlist .active::after {
+      transform: scaleX(1);
+    }
+
+    /* Notes Section */
+    .notes-section {
+      padding: 5rem 3rem;
+      color: #333;
+    }
+
+    .notes-section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: teal;
+    }
+
+    .notes-grid {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .note-item {
+      background: #fff;
+      padding: 1.5rem 2rem;
+      border-left: 5px solid pink;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .note-item:hover {
+      transform: scale(1.02);
+    }
+
+    .note-item h3 {
+      font-size: 1.5rem;
+      color: black;
+      margin-bottom: 0.5rem;
+    }
+
+    .note-item p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .note-item .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: pink;
+      color: black;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .note-item .btn:hover {
+      background-color: #ffb6c1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <ul class="navlist">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="achievements.html">Achievements</a></li>
+    <li><a href="notes.html" class="active">Notes</a></li>
+    
+  </ul>
+
+  <!-- Notes Section -->
+  <section class="notes-section">
+    <h2>Lecture Notes</h2>
+    <div class="notes-grid">
+
+      <div class="note-item">
+        <h3>Unit 1 – Introduction to Fundamental System</h3>
+        <p>Download PDF notes for Unit 1.</p>
+        <a href="pdf/unit1.pdf" class="btn" download>Download</a>
+      </div>
+
+      <div class="note-item">
+        <h3>Unit 2 – Internet of Things:concepts</h3>
+        <p>Download PDF notes for Unit 2.</p>
+        <a href="pdf/unit2.pdf" class="btn" download>Download</a>
+      </div>
+
+      <div class="note-item">
+        <h3>Unit 3 – IOT:Design Methodology</h3>
+        <p>Download PDF notes for Unit 3.</p>
+        <a href="pdf/unit3.pdf" class="btn" download>Download</a>
+      </div>
+
+      <div class="note-item">
+        <h3>Unit 4 – IOT Protocols </h3>
+        <p>Download PDF notes for Unit 4.</p>
+        <a href="pdf/unit4.pdf" class="btn" download>Download</a>
+      </div>
+      <div class="note-item">
+        <h3>Unit 5 – Cloud Platform for IOT</h3>
+        <p>Download PDF notes for Unit 3.</p>
+        <a href="pdf/unit5.pdf" class="btn" download>Download</a>
+      </div>
+
+      <div class="note-item">
+        <h3>Unit 6 – Security in IOT </h3>
+        <p>Download PDF notes for Unit 4.</p>
+        <a href="pdf/unit6.pdf" class="btn" download>Download</a>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
